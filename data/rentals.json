@@ -1,6 +1,32 @@
 {
   "rentals": [
     {
+      "id": "vhf2040-2026-06-16",
+      "plate": "VHF2040",
+      "startDate": "2026-06-16",
+      "endDate": "2026-06-29",
+      "vehicleCost": 1881,
+      "totalPay": 1260,
+      "totalGet": 2040,
+      "net": 159,
+      "days": 13,
+      "note": "9 completed items and 3 pending items",
+      "items": [
+        {"pay":105,"getBack":170,"status":"pending"},
+        {"pay":105,"getBack":170,"status":"pending"},
+        {"pay":105,"getBack":170,"status":"pending"},
+        {"pay":105,"getBack":170,"status":"completed"},
+        {"pay":105,"getBack":170,"status":"completed"},
+        {"pay":105,"getBack":170,"status":"completed"},
+        {"pay":105,"getBack":170,"status":"completed"},
+        {"pay":105,"getBack":170,"status":"completed"},
+        {"pay":105,"getBack":170,"status":"completed"},
+        {"pay":105,"getBack":170,"status":"completed"},
+        {"pay":105,"getBack":170,"status":"completed"},
+        {"pay":105,"getBack":170,"status":"completed"}
+      ]
+    },
+    {
       "id": "vhh7841-2026-06-30",
       "plate": "VHH7841",
       "startDate": "2026-06-30",
