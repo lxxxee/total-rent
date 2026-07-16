@@ -1,0 +1,23 @@
+{
+  "rentals": [
+    {
+      "id": "vhh7841-2026-06-30",
+      "plate": "VHH7841",
+      "startDate": "2026-06-30",
+      "endDate": "2026-07-14",
+      "vehicleCost": 2047,
+      "totalPay": 1130,
+      "totalGet": 2520,
+      "net": 657,
+      "days": 14,
+      "note": "รายการแรก",
+      "items": [
+        {"pay":105,"getBack":170},{"pay":60,"getBack":170},{"pay":105,"getBack":170},
+        {"pay":60,"getBack":170},{"pay":65,"getBack":170},{"pay":65,"getBack":170},
+        {"pay":65,"getBack":170},{"pay":65,"getBack":170},{"pay":65,"getBack":170},
+        {"pay":60,"getBack":170},{"pay":65,"getBack":140},{"pay":65,"getBack":170},
+        {"pay":65,"getBack":170},{"pay":110,"getBack":170},{"pay":110,"getBack":170}
+      ]
+    }
+  ]
+}
