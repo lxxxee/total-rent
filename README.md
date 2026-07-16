@@ -1,14 +1,14 @@
 # Total Rent
 
-พื้นที่ส่วนตัวบน GitHub สำหรับเก็บประวัติการเช่ารถ กำไร/ขาดทุน และรายการ Pay/Get Back
+A private GitHub repository for tracking vehicle rentals, profit or loss, and Pay/Get Back items.
 
-Repository นี้ตั้งเป็น **Private** ต้องล็อกอิน GitHub และมีสิทธิ์จึงจะเปิดข้อมูลได้
+This repository is **Private**. You must be signed in to an authorized GitHub account to access the data.
 
-## วิธีเพิ่มข้อมูล
+## How to add new data
 
-1. เปิด `inbox.md` บน GitHub แล้ววางข้อมูลดิบ
-2. Commit การแก้ไข
-3. บอก Codex ว่า `จัดข้อมูล Total Rent`
-4. Codex จะอ่านข้อมูล ตรวจยอด เรียงวันที่ และอัปเดต `data/rentals.json`
+1. Open `inbox.md` on GitHub and paste the raw rental information.
+2. Commit the change.
+3. Ask Codex: `Organize Total Rent data`.
+4. Codex will review the information, verify the totals, sort the records by date, and update `data/rentals.json`.
 
-Codex จะจัดข้อมูลใน `data/rentals.json` และสรุปผลไว้ใน Repository นี้
+Codex maintains the organized records in `data/rentals.json` and keeps the repository summary up to date.

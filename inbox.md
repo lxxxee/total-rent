@@ -1,8 +1,7 @@
-# ข้อมูลใหม่สำหรับ Codex
+# New rental data for Codex
 
-วางข้อมูลการเช่าครั้งใหม่ไว้ใต้เส้นนี้ แล้วบอก Codex ว่า **จัดข้อมูล Total Rent**
+Paste the new rental information below this line, then ask Codex to **Organize Total Rent data**.
 
 ---
 
-<!-- วางข้อมูลตรงนี้ -->
-
+<!-- Paste the new data here -->

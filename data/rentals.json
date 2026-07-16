@@ -10,7 +10,7 @@
       "totalGet": 2520,
       "net": 657,
       "days": 14,
-      "note": "รายการแรก",
+      "note": "First record",
       "items": [
         {"pay":105,"getBack":170},{"pay":60,"getBack":170},{"pay":105,"getBack":170},
         {"pay":60,"getBack":170},{"pay":65,"getBack":170},{"pay":65,"getBack":170},
