@@ -1,0 +1,121 @@
+# Pre-commit hook configuration for security and code quality
+# Install: pre-commit install --install-hooks
+# Run: pre-commit run --all-files
+# Validate: pre-commit validate-config
+
+repos:
+  # ============================================================================
+  # SECRETS & CREDENTIAL DETECTION
+  # ============================================================================
+  
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.2
+    hooks:
+      - id: gitleaks
+        name: "Gitleaks - Detect hardcoded secrets"
+        description: "Scan for API keys, tokens, passwords, SSH keys, and other credentials"
+        entry: gitleaks protect --verbose --log-level debug
+        language: golang
+        stages: [commit]
+        types: [text]
+        exclude: |
+          (?x)^(
+            package-lock\.json|
+            yarn\.lock|
+            pnpm-lock\.yaml|
+            \.git/|
+            \.vscode/|
+            node_modules/
+          )$
+
+  # ============================================================================
+  # STATIC ANALYSIS & CODE SECURITY (Semgrep)
+  # ============================================================================
+  
+  - repo: https://github.com/semgrep/pre-commit
+    rev: v1.170.0
+    hooks:
+      - id: semgrep
+        name: "Semgrep - Static analysis for security & code quality"
+        description: |
+          Detects:
+          - SQL injection, command injection, path traversal
+          - Unsafe crypto, weak authentication
+          - Insecure HTTP requests, XXE attacks
+          - Unsafe deserialization
+          - Race conditions, logic errors
+        args:
+          - --config=auto
+          - --error
+          - --metrics=off
+        language: python
+        stages: [commit]
+        types: [javascript, typescript, jsx, tsx, json, yaml, yml, python]
+
+  # ============================================================================
+  # GENERIC SECRET & PATTERN DETECTION
+  # ============================================================================
+  
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: detect-private-key
+        name: "Detect private keys"
+        description: "Detects presence of private key files (RSA, DSA, EC, OpenSSH, PuTTY)"
+        stages: [commit]
+      
+      - id: check-case-conflict
+        name: "Check for case conflicts"
+        description: "Prevent files that would conflict in case-insensitive filesystems"
+      
+      - id: check-merge-conflict
+        name: "Check for merge conflicts"
+        description: "Prevent commits with unresolved merge conflicts"
+      
+      - id: check-json
+        name: "Check JSON files"
+        description: "Validate JSON syntax"
+      
+      - id: check-yaml
+        name: "Check YAML files"
+        description: "Validate YAML syntax"
+
+  # ============================================================================
+  # FILE CONTENT SECURITY
+  # ============================================================================
+  
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-safety
+    rev: v1.3.2
+    hooks:
+      - id: python-safety-dependencies-check
+        name: "Safety - Check Python dependencies for vulnerabilities"
+        description: "Check for known security vulnerabilities in Python packages"
+        language: python
+        stages: [commit]
+        files: requirements\.txt|setup\.py|pyproject\.toml
+
+  # ============================================================================
+  # COMMIT MESSAGE SECURITY
+  # ============================================================================
+  
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v3.4.0
+    hooks:
+      - id: conventional-pre-commit
+        name: "Conventional commits - Enforce commit message format"
+        description: "Enforce conventional commit message format"
+        stages: [commit-msg]
+
+# ============================================================================
+# CONFIGURATION
+# ============================================================================
+
+# Skip installation for specific hooks if tools aren't available
+default_language_version:
+  python: python3
+
+# Fail if any required tools are missing
+fail_fast: false
+
+# Apply to all stages by default
+default_stages: [commit]
