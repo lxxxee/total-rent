@@ -1,6 +1,29 @@
 {
   "rentals": [
     {
+      "id": "vhh7933-2026-07-22",
+      "plate": "VHH7933",
+      "startDate": "2026-07-22",
+      "endDate": "2026-08-05",
+      "vehicleCost": 2249,
+      "totalPay": 315,
+      "totalGet": 2110,
+      "reportedTotalGet": 510,
+      "net": 2054,
+      "days": 14,
+      "netSource": "reported",
+      "needsReview": true,
+      "lastUpdated": "2026-07-26T18:36:00+08:00",
+      "note": "Reported Total Get was RM 510, but the five items total RM 2,110 because item 5 adds RM 1,600. Net RM 2,054 is preserved as reported.",
+      "items": [
+        {"pay":0,"getBack":0},
+        {"pay":105,"getBack":170},
+        {"pay":105,"getBack":170},
+        {"pay":105,"getBack":170},
+        {"pay":0,"getBack":1600}
+      ]
+    },
+    {
       "id": "vhf2040-2026-06-16",
       "plate": "VHF2040",
       "startDate": "2026-06-16",
