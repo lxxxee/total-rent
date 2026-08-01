@@ -1,0 +1,14 @@
+{
+  "name": "total-rent-line",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/dev-server.js",
+    "test": "node --test",
+    "mcp": "node mcp/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
