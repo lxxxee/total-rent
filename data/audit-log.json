@@ -1,0 +1,15 @@
+{
+  "events": [
+    {
+      "timestamp": "2026-08-04T00:00:00.000Z",
+      "actor": "Codex",
+      "action": "baseline_import",
+      "recordIds": [
+        "vhh7933-2026-07-22",
+        "vhf2040-2026-06-16",
+        "vhh7841-2026-06-30"
+      ],
+      "note": "Existing approved records preserved as the initial audit baseline."
+    }
+  ]
+}

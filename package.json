@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "start": "node scripts/dev-server.js",
+    "build": "node scripts/build.mjs",
+    "validate:data": "node scripts/validate-data.mjs",
+    "import:inbox": "node scripts/import-inbox.mjs",
     "test": "node --test",
     "mcp": "node mcp/server.js"
   },
