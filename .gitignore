@@ -1,3 +1,8 @@
 .DS_Store
 *.log
 .env*
+node_modules/
+dist/
+outputs/
+.playwright-cli/
+output/

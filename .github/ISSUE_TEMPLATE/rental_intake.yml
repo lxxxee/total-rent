@@ -1,0 +1,29 @@
+name: Rental Intake
+description: Submit a completed rental session for Codex review
+title: "Rental intake: "
+labels:
+  - rental-inbox
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Paste the rental details below. Codex will validate the amounts before approved data changes.
+  - type: textarea
+    id: rental_details
+    attributes:
+      label: Rental details
+      description: Include plate, date range, vehicle cost, and every Pay/Get Back item.
+      placeholder: |
+        Plate: VHH1234
+        Date: 1-14 August 2026
+        Vehicle cost: RM 2,000
+        Pay RM 105 Get Back RM 170
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I understand this submission will be reviewed before it changes approved financial data.
+          required: true
