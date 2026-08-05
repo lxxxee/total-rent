@@ -9,3 +9,7 @@ Total Rent contains private financial records.
 - Website changes create review requests; they do not directly modify approved financial data.
 
 Cloudflare Access or an equivalent identity-aware gate must be configured and tested separately before production deployment. This branch intentionally does not claim that deployment protection is active.
+
+The Vercel production build publishes only a data-free status page and the
+signature-verified LINE webhook. Approved rental JSON is bundled inside the
+server function for replies but is not copied into public static assets.
